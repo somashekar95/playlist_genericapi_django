@@ -8,9 +8,9 @@ class playlist(models.Model):
     user=models.CharField(max_length=100)
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
-
-def __str__(self):
-    return self.playlist_name
+    
+    def __str__(self):
+        return self.playlist_name+self.playlist_id
 
 class song(models.Model):
     song_id=models.CharField(max_length=10)
@@ -18,6 +18,6 @@ class song(models.Model):
     song_name=models.CharField (max_length=50,unique=True)
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
-  
-def __str__(self):
-    return self.playlist_name
+
+    def __str__(self):
+        return self.playlist_name+self.song_id

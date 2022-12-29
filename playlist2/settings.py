@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'playlist2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+DATABASES ={
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'music',
@@ -84,6 +84,12 @@ DATABASES = {
         'HOST':'localhost'
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation

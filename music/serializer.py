@@ -8,7 +8,7 @@ class songSerializer(serializers.ModelSerializer):
 
 
 class playlistSerializer(serializers.ModelSerializer):
-    song=songSerializer(read_only=True,many=True)
+    # song=songSerializer(read_only=True,many=True)
     class Meta:
         model=playlist
         fields='__all__'
