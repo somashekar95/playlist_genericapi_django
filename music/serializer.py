@@ -1,14 +1,22 @@
 from rest_framework import serializers
-from .models import playlist,song
+from .models import playlist,song,list,user
+
+class playlistSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = playlist
+        fields ='__all__'
 
 class songSerializer(serializers.ModelSerializer):
     class Meta:
-        model=song
-        fields='__all__'
+        model = song
+        fields ='__all__'
 
-
-class playlistSerializer(serializers.ModelSerializer):
-    # song=songSerializer(read_only=True,many=True)
+class listSerializer(serializers.ModelSerializer):
     class Meta:
-        model=playlist
-        fields='__all__'
+        model = list
+        fields ='__all__'
+
+class userSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = user
+        fields ='__all__'

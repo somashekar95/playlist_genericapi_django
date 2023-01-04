@@ -15,15 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from music.views import playList,playlistDetails,songlist,songDetails,playlistList
-
-
+from music.views import playlist_list
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/play',playList.as_view()),
-    path('api/list',playlistList.as_view()),
-    path('api/play/<int:pk>',playlistDetails.as_view()),
-    path('api/songs',songlist.as_view()),
-    path('api/songs/<int:pk>',songDetails.as_view()),
-    path('',include('music.urls'))
+    path('',include('music.url'))
+
 ]
+
+
+
